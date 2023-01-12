@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01-WebAPIGiris", "01-WebAPIGiris\01-WebAPIGiris.csproj", "{DD63670C-10ED-4A91-8132-67C563F91019}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02-WebAPIWithFakeData", "02-WebAPIWithFakeData\02-WebAPIWithFakeData.csproj", "{9D18F646-E18A-4DB8-80C2-1231D0530630}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD63670C-10ED-4A91-8132-67C563F91019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD63670C-10ED-4A91-8132-67C563F91019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD63670C-10ED-4A91-8132-67C563F91019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD63670C-10ED-4A91-8132-67C563F91019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D18F646-E18A-4DB8-80C2-1231D0530630}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D18F646-E18A-4DB8-80C2-1231D0530630}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D18F646-E18A-4DB8-80C2-1231D0530630}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D18F646-E18A-4DB8-80C2-1231D0530630}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01D3E0B7-7B9F-41BB-BF23-4893998210C3}
+	EndGlobalSection
+EndGlobal
