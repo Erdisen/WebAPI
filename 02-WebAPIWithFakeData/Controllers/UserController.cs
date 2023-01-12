@@ -45,5 +45,43 @@ namespace _02_WebAPIWithFakeData.Controllers
         //2.HttPost ile tetiklenen metot, Listeye bir kullanıcı eklesin.
         //3.HttpPut ile tetiklenen metot, listedeki bir kullanıcıyı güncellesin
         //4.HttpDelete ile tetiklenen metot, Listedeki bir kullanıcıyı silsin.
+
+        [HttpPost]
+        public User Post([FromBody]User user)  // FromBody, gönderilen isteğin body kısmında bir user nesnesini bekler. Gönderilen user nesnesi karşılanır ve aşağıdaki yapı ile listeye eklenir.
+        {
+            _kullanicilar.Add(user);
+            return user;
+        }
+
+        [HttpPut]
+        public User Put([FromBody] User user) // güncelleme
+        {
+            //hangi user'i güncelleyecek isek önce onu bulmalıyız. Daha sonra ilgili alanlarına parametreden gelen nesnenin ilgili alanlarında değerleri atamalıyız.
+
+            //var guncellenecekUser = _kullanicilar.FirstOrDefault(x => x.ID == user.ID);
+            var guncellenecekUser = Get(user.ID);
+            guncellenecekUser.FirstName = user.FirstName;
+            guncellenecekUser.LastName = user.LastName;
+            guncellenecekUser.Address = user.Address;
+
+            return user;
+        }
+
+        [HttpDelete("{id}")]
+        public string Delete(int id)
+        {
+            var silinecekUser = _kullanicilar.FirstOrDefault(x => x.ID == id);
+            //var silinecekUser = Get(id);
+            if (silinecekUser!=null)
+            {
+                _kullanicilar.Remove(silinecekUser);
+                return "Kullanıcı listeden silindi.";
+            }
+            else
+            {
+                return "Silinecek kullanıcı bulunamadı! Lütfen doğru bir ID bilgisi ile deneyin...";
+            }
+           
+        }
     }
 }
